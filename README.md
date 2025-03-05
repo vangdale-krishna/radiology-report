@@ -1,0 +1,11 @@
+Methodology
+
+The proposed AI-based automatic report generation system for breast ultrasound images consists of three key components: a Vision Transformer-based image feature extractor a multi-modal transformer architecture for cross-modal alignment, and a report generation module.
+
+Image Feature Extractor: The image feature extractor module is based on the Vision Transformer architecture proposed in recent work (Alqahtani et al., 2024). The ViT model processes the input breast ultrasound image by dividing it into a grid of small patches, which are then passed through a series of transformer encoder layers to extract comprehensive visual features. This allows the model to capture both the spatial relationships within the image as well as the important contextual information relevant for the downstream classification and report generation tasks.
+
+Cross-modal Alignment: The cross-modal alignment module is responsible for integrating the visual features extracted by the Vision Transformer with the corresponding textual information, such as medical reports and diagnostic labels. This integration is achieved using a multi-modal transformer architecture, which learns to align the visual and textual representations by exploiting the bidirectional interactions between the two modalities. By leveraging these cross-modal connections, the model is able to better understand the relationship between the image content and the associated textual data, enabling more accurate and comprehensive report generation.
+
+Report Generation: The report generation module is designed to leverage the aligned visual-textual representations to produce a coherent and comprehensive report describing the findings from the breast ultrasound image. This module employs a large language model such as GPT or DeepSpeeck to generate the report text word-by-word, with the generation process conditioned on the integrated visual and textual features. By utilizing these cross-modal representations, the report generation component can produce detailed and accurate descriptions of the key diagnostic information extracted from the breast ultrasound image.
+
+The proposed system is trained end-to-end using a large dataset of breast ultrasound images and their corresponding medical reports, as well as any available diagnostic labels or annotations.
